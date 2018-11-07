@@ -1,5 +1,33 @@
-<ul>
-{% for event in object_list %}
-   <li>{{event.name}} ({{event.venue}})</li>
-{% endfor %} 
-</ul>   
+{% extends "base.html" %}
+
+{% block title %}
+All Events
+{% endblock %}
+
+
+{% block content %}
+<div class="card">
+        <div class="card-header">
+          All Events
+        </div>
+        <div class="card-body">
+                <div class="list-group">
+                        {% for event in object_list %}
+                           
+                             <a href="#!" class="list-group-item list-group-item-action flex-column align-items-start">
+                                <div class="d-flex w-100 justify-content-between">
+                                  <h5 class="mb-1">{{event.name}}</h5>
+                                  <small>{{event.date_from}} - {{event.date_to}}
+                                      at {{event.venue}}
+                                  </small>
+                                </div>
+                                <p class="mb-1">{{event.description | slice:":500"}}...</p>
+                               
+                              </a>
+                        
+                           <li>{{event.name}} ({{event.venue}})</li>
+                        {% endfor %} 
+                        </div>   
+                    </div>                      
+                </div>
+{% endblock %}
