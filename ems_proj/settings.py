@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'crispy forms',
     'events'
+    'users'
 ]
 
 MIDDLEWARE = [
@@ -125,3 +126,5 @@ LOGIN_REDIRECT_URL = "home"
 LOGOUT_REDIRECT_URL = "home"
 
 CRISPY_TEMPLATE_PACK = "bootstrap4"
+
+ATUH_USERS_MODEL = 'user.Participant'
