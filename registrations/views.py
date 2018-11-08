@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 # Create your views here.
 
-from events.models import Event
+from events.models import Event 
 from .models import Registration
 
 from django.views.generic import TemplateView
